@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block title %} Кинотеатр | гостевая книга {% endblock %}
+{% block template %}
+    <link rel="stylesheet" href="{% static 'guest.css' %}">
+    <script type="text/javascript" src="{% static 'js/jquery.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jq_guest.js' %}"></script>
+{% endblock %}
+{% block content %}
+	<div class="body">
+		<p class="body_p">
+		</p>
+		<h4>
+		    Гостевая книга кинотеатра
+		</h4>
+		<p class="p_price">
+			Тут Вы можете оставить свои отзывы о работе кинотеатра или сайта, задать вопрос Администрации или просто похвалить нас..
+		</p>
+		<H4>
+			Внимание!
+		</H4>
+		<p class="p_price">
+			На странице <a href="soon.html">скоро в прокате</a> находится список фильмов, которые планируются к показу в кинотеатре.
+		</p>
+		<p class="p1">
+		    Добавить новое сообщение
+		</p>
+    <form method="POST">
+            {% csrf_token %}
+		<div class="wind">
+			<div class="inp1">
+                <label for="name"></label><input type="text" name="name" required="required" id="name" placeholder="Ваше имя...">
+			</div>
+			<div class="inp1">
+                <label for="email"></label><input type="text" name="email" required="required" id="email" placeholder="Email...">
+			</div>
+			<div class="ta">
+                <label for="comment"></label><textarea name="comment" id="comment" aria-required="true" required="required" placeholder="Сообщение..."></textarea>
+			</div>
+			<div class="inp1">
+				<button class="btn1">Отправить</button>
+			</div>
+		</div>
+    </form>
+		<div class="comment">
+			<H4>
+				Последние сообщения из гостевой книги:
+			</H4>
+		</div>
+
+        {% for review in reviews %}
+
+        <div class="guest_review">
+            <h5>{{ otziv.0.name }}</h5>
+            {{ otziv.0.date }}<br><br>
+            <p class="guest_text">{{ otziv.0.text }}</p>
+            {% if not otziv.1 and user.is_superuser  %}
+            <button class="admin_but" data-target="{{ review.0.id }},{{ review.0.name }}">Ответить</button>
+            {% endif %}
+        </div>
+        {% if otziv.1 %}
+        <div class="admin_review">
+            <h5 style="color:yellow;">Администратор</h5>
+            <p class="guest_text">{{ review.1.text }}</p>
+        </div>
+        {% endif %}
+        <br>
+
+        {% endfor %}
+
+        <div style="display: none;" id="hid_area">
+            <form method="POST">
+                 {% csrf_token %}
+                <div class="ta">
+                    <label for="admin_comment"></label><textarea name="admin_comment" id="admin_comment" aria-required="true" placeholder="Сообщение..."></textarea>
+                </div>
+                <div class="inp1">
+                    <button class="btn2">Ответить</button>
+                </div>
+            </form>
+        </div>
+
+<script type="text/javascript" src="{% static 'js/jq_guest.js' %}"></script>
+{% endblock %}
