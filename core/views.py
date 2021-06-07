@@ -111,12 +111,12 @@ def main(request, url_date=datetime.today().date(), page_number=1):
     dates_for_weekday = dates = []
     dates.append((datetime.today().date().strftime('%Y-%m-%d'),
                   datetime.isoweekday(datetime.today().date())))
-    dates_for_weekday.append((datetime.today().date().strftime('%d.%m'),
+    dates_for_weekday.append((datetime.today().date().strftime('%Y-%m-%d'),
                               datetime.isoweekday(datetime.today().date())))
 
     for i in range(1, 7):
         dates_for_weekday.append(
-            ((datetime.today().date() + timedelta(days=i)).strftime('%d.%m'),
+            ((datetime.today().date() + timedelta(days=i)).strftime('%Y-%m-%d'),
              datetime.isoweekday((datetime.today().date() + timedelta(days=i)))))
         dates.append(
             ((datetime.today().date() + timedelta(days=i)).strftime('%Y-%m-%d'),
@@ -515,7 +515,7 @@ def create_report(selss, variety):
     pdfmetrics.registerFont(TTFont('test', 'static/fonts/BuxtonSketch.ttf'))
     c.setFont("test", 20)
 
-    if variety == 'seans':
+    if variety == 'session':
         c.drawString(130, 800, 'Отчет по продаже билетов кинотеатра за сеанс')
     elif variety == 'date':
         c.drawString(130, 800, 'Отчет по продаже билетов кинотеатра по дате')

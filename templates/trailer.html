@@ -2,7 +2,7 @@
 {% load static %}
 {% block title %} {{ film.name }} | трейлер {% endblock %}
 {% block template %}
-	<link rel="stylesheet" href="{% static 'trailer.css' %}">
+	<link rel="stylesheet" href="{% static 'css/trailer.css' %}">
 {% endblock %}
 {% block content %}
 	<div class="body">
@@ -15,7 +15,7 @@
 				<ul class="three_ul">
 					<li class="three_li"><img src="{% static 'img/ico1.png' %}"><a href="/film/{{ film.url_name }}/">Расписание сеансов и цены</a></li>
 					<li class="three_li"><img src="{% static 'img/ico2.png' %}">Смотреть трейлер</li>
-					<li class="three_li"><img src="{% static 'img/ico3.png' %}"><a href="/otziv/{{ film.url_name }}/"> Напишите отзыв о фильме</a></li>
+					<li class="three_li"><img src="{% static 'img/ico3.png' %}"><a href="/review/{{ film.url_name }}/"> Напишите отзыв о фильме</a></li>
 				</ul>
 				<div class="video">
 					<iframe width="760" height="375" src="{{ film.trailer }}" frameborder="0" allowfullscreen></iframe>
