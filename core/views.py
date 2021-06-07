@@ -159,7 +159,7 @@ def main(request, url_date=datetime.today().date(), page_number=1):
     args['sessions'] = current_page.page(page_number)
     if len(b) == 0:
         args['no_sessions'] = True
-    return render(request, 'test_film.html', args)
+    return render(request, 'main.html', args)
 
 
 def my_kino(request):

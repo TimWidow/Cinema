@@ -4,7 +4,6 @@ body {
  	bottom:0;
  	left:0;
  	right:0;
-	#background-image: url(img/titanik.png);
 	background-image: url(img/4.png);
 	background-size: cover;
 	min-height: 100%;
@@ -14,7 +13,7 @@ body {
 
 .p_one {
 	font-size: 25px;
-	font-family: "Century gothic";
+	font-family: "Century gothic", serif;
 	margin-top: 10px;
 	text-align: center;
 	color: white;
@@ -30,10 +29,9 @@ hr {
 	#background-repeat: no-repeat;
 	width: 600px;
 	min-height: 500px;
-	margin: 0 auto;
 	border-radius: 3px;
 	border: 1px solid #E7ECF5;
-	margin-top: 90px;
+	margin: 90px auto 0;
 }
 
 .fields {
@@ -42,7 +40,7 @@ hr {
 }
 
 .text1, .text2, .text3, .text4, .text5 {
-	font-family: "Century gothic";
+	font-family: "Century gothic", serif;
 	font-size: 15px;
 	margin-left: 15px;
     	color: white;
@@ -71,7 +69,7 @@ hr {
 	background: #EFEFEF;
 	border: 1px solid #E5E5E5;
 	border-radius: 2px;
-	font-family: "Century gothic";
+	font-family: "Century gothic", serif;
 	color: #484848;
 	outline-color: #E5E5E5;
 }
@@ -84,7 +82,7 @@ hr {
 	border: 1px solid #E5E5E5;
 	border-radius: 2px;
 	outline-color: #E5E5E5;
-	font-family: "Century gothic";
+	font-family: "Century gothic", serif;
 	color: #484848;
 }
 .inp3 {
@@ -95,7 +93,7 @@ hr {
 	border: 1px solid #E5E5E5;
 	border-radius: 2px;
 	outline-color: #E5E5E5;
-	font-family: "Century gothic";
+	font-family: "Century gothic", serif;
 	color: #484848;
 }
 
@@ -110,7 +108,7 @@ hr {
 	margin-left: 140px;
 	background: #4B6D94;
 	color: #fff;
-	font-family: "Century gothic";
+	font-family: "Century gothic", serif;
 	border: none;
 	outline: none;
 }

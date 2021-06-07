@@ -1,13 +1,10 @@
 .back {
-	position:fixed;
  	top:0; 
  	bottom:0; 
  	left:0; 
  	right:0; 
 	background-image: url(img/b12.jpg);
 	background-size: 100%;
-	min-height: 3000px;
-	min-width: 1300px;
 }  
 
 .cont_one {
@@ -88,24 +85,22 @@
 }
 
 .navbar {
+	width: 100%;
 	margin-top: 77px;
 }
 
 
 .body {
-	width: 1000px;
+	width: 100%;
 	height: 840px;
-	background: #fff;
-	margin: 0 auto;
-	margin-top: -20px;
+	margin: -20px auto 0;
 }
 
 .footer {
 	width: 1000px;
 	height: 100px;
 	background: #262626;
-	margin: 0 auto;
-	margin-top: 90px;
+	margin: 90px auto 0;
 }
 
 .foot {
@@ -129,7 +124,6 @@
 
 .navbar-inner {
 	width: 960px;
-	margin: 0 auto;
 	border-radius: 0;
 	border: none;
 	background: rgb(0, 0, 52);
@@ -139,7 +133,7 @@
 	background: -ms-linear-gradient(90deg, rgb(0, 0, 52) 90%, rgb(70, 77, 255) 90%);
 	background: linear-gradient(180deg, rgb(0, 0, 52) 90%, rgb(70, 77, 255) 90%);
 	opacity: 1;
-	margin-top: -54px;
+	margin: -54px auto 0;
 }
 
 
@@ -151,34 +145,26 @@
 }
 
 h4 {
+	color: #fff;
 	margin-left: 20px;
 	padding-top:  18px;
 	font-weight: 100;
 	font-size: 22px;
 }
 
-#myCarousel {
-	width: 1000px;
-	margin: 0 auto;
-	margin-top: 20px;
-}
-
-.carousel-control {
-	margin-top: 0px;
-	opacity: 0.7;
-	background: #000034;
-}
-
 .p_price {
+	color: #fff;
 	padding-top: 5px;
 	margin-left: 20px;
 }
 
 .p_price2 {
+	color: #fff;
 	margin-left: 20px;
 }
 
 .p_price3 {
+	color: #fff;
 	padding-top: 5px;
 	margin-left: 20px;
 }
@@ -224,11 +210,12 @@ width: 400px;
 height: 50px;
 background: #fff;
 display: none;
-box-shadow: 0px 0px 6px #7d7d7d;
+box-shadow: 0 0 6px #7d7d7d;
 }
 
 .info p {
-	font-family: Tahoma; font-size: 13px;
+	font-family: Tahoma, serif;
+	font-size: 13px;
 }
 
 .item:hover .info {

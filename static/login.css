@@ -29,9 +29,10 @@
  	left:0; 
  	right:0; 
 	background-image: url(img/6.png);
-	background-size: 100%;
-	min-height: 3000px;
-	min-width: 1300px;
+	background-size: cover;
+	min-height: 100%;
+	min-width: 100%;
+	background-repeat: no-repeat;
 }  
 
 .cont_one {
@@ -48,8 +49,6 @@
 	width: 315px;
 	background: #fff;
 	border-radius: 8px;
-	margin-left: 0px;
-	margin-top: 0px;
 	margin: 150px auto;
 }
 
@@ -109,7 +108,7 @@ p {
 }
 
 .inp2 {
-	margin-top: 0px;
+	margin-top: 0;
 	width: 250px;
 	height: 40px;
 	border-radius: 5px;

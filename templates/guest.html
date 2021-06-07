@@ -1,7 +1,5 @@
 {% extends "base.html" %}
 {% load static %}
-
-
 {% block title %} Кинотеатр | гостевая книга {% endblock %}
 {% block template %}
     <link rel="stylesheet" href="{% static 'guest.css' %}">
@@ -18,14 +16,14 @@
 		<p class="p_price">
 			Тут Вы можете оставить свои отзывы о работе кинотеатра или сайта, задать вопрос Администрации или просто похвалить нас..
 		</p>
-		<H4>
+		<h4>
 			Внимание!
-		</H4>
+		</h4>
 		<p class="p_price">
 			На странице <a href="soon.html">скоро в прокате</a> находится список фильмов, которые планируются к показу в кинотеатре.
 		</p>
 		<p class="p1">
-		    Добавить новое сообщение
+		    Добавить новое сообщение:
 		</p>
     <form method="POST">
             {% csrf_token %}
@@ -83,4 +81,5 @@
         </div>
 
 <script type="text/javascript" src="{% static 'js/jq_guest.js' %}"></script>
+</div>
 {% endblock %}

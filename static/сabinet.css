@@ -1,13 +1,13 @@
 .back {
-	position:fixed;
  	top:0;
  	bottom:0;
  	left:0;
  	right:0;
 	background-image: url(img/b12.jpg);
-	background-size: 100%;
-	min-height: 3000px;
-	min-width: 1300px;
+	background-size: cover;
+	min-height: 100%;
+	min-width: 100%;
+	background-repeat: no-repeat;
 }
 
 .cont_one {
@@ -22,7 +22,7 @@
 	font-size: 65px;
 	color: #F4B821;
 	text-align: center;
-	font-family: "BOOK ANTIQUA";
+	font-family: "BOOK ANTIQUA", serif;
 	margin-top: 37px;
 }
 
@@ -30,7 +30,7 @@
 	font-size: 15px;
 	color: #EFF4F4;
 	text-align: center;
-	font-family: "BOOK ANTIQUA";
+	font-family: "BOOK ANTIQUA", serif;
 	margin-top: 15px;
 	font-weight: bold;
 }
@@ -39,7 +39,7 @@
 	font-size: 20px;
 	color: #F4B821;
 	text-align: center;
-	font-family: "BOOK ANTIQUA";
+	font-family: "BOOK ANTIQUA", serif;
 	margin-top: 27px;
 	font-weight: bold;
 }
@@ -94,10 +94,8 @@ background: rgb(153, 10, 65);
 
 .body {
 	width: 1000px;
-
-	background: #fff;
-	margin: 0 auto;
-	margin-top: -20px;
+	opacity: .9;
+	margin: -20px auto 0;
 }
 
 
@@ -105,8 +103,7 @@ background: rgb(153, 10, 65);
 	width: 1000px;
 	height: 100px;
 	background: #262626;
-	margin: 0 auto;
-	margin-top: 100px;
+	margin: 100px auto 0;
 }
 
 .foot {
@@ -130,7 +127,6 @@ background: rgb(153, 10, 65);
 
 .navbar-inner {
 	width: 960px;
-	margin: 0 auto;
 	border-radius: 0;
 	border: none;
 	background: rgb(0, 0, 52);
@@ -140,7 +136,7 @@ background: rgb(153, 10, 65);
 	background: -ms-linear-gradient(90deg, rgb(0, 0, 52) 90%, rgb(70, 77, 255) 90%);
 	background: linear-gradient(180deg, rgb(0, 0, 52) 90%, rgb(70, 77, 255) 90%);
 	opacity: 1;
-	margin-top: -54px;
+	margin: -54px auto 0;
 }
 
 
@@ -156,17 +152,6 @@ h4 {
 	padding-top:  18px;
 	font-weight: 100;
 	font-size: 22px;
-}
-
-#myCarousel {
-	width: 1000px;
-	margin: 0 auto;
-	margin-top: 20px;
-}
-.carousel-control {
-	margin-top: 0px;
-	opacity: 0.7;
-	background: #000034;
 }
 
 .p_ul_one {
@@ -215,16 +200,16 @@ h4 {
   color: #454545;
 }
 
-.text_bilet{
+.text_ticket{
 	margin-left:50px;
 }
-.kupleno{
+.buy{
 	margin-left:180px;
 	color: green;
 	font-size: 15px;
 }
 
-.bron{
+.booking{
 	margin-left:180px;
 	color:red;
 	font-size: 15px;
@@ -234,29 +219,25 @@ h4 {
 	color: #1a1a1a;
 	font-style: italic;
 	font-size:18px;
-    font-family: Candara;
+	font-family: Candara, serif;
 }
 
-.kabinet_table{
+.cabinet_table{
     width:850px;
-    margin-left:auto;
-    margin-right:auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    font-size: 20px;
-    font-family: Candara;
+	margin: 20px auto;
+	font-size: 20px;
+	font-family: Candara, serif;
 
 }
-.kabinet_caption{
+.cabinet_caption{
     margin-top: 30px;
     margin-bottom: 10px;
     font-size: 25px;
 }
 
-.text_bilet{
-
+.text_ticket{
     font-size: 17px;
-    font-family: Candara;
+	font-family: Candara, serif;
 }
 
 .pad_td{
@@ -266,7 +247,7 @@ h4 {
 button{
     height: 50px;
     width: 200px;
-    font-family: Candara;
+	font-family: Candara, serif;
     font-size: 15px;
     color:white;
 
@@ -293,7 +274,7 @@ background: rgb(0, 0, 52);
 .button{
     height: 50px;
     width: 200px;
-    font-family: Candara;
+	font-family: Candara, serif;
     font-size: 15px;
     color:white;
 

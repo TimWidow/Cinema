@@ -3,7 +3,7 @@
 
 {% block title %} {{ film.name }} | расписание {% endblock %}
 {% block template %}
-	<link rel="stylesheet" href="{% static 'seans.css' %}">
+	<link rel="stylesheet" href="{% static 'session.css' %}">
 {% endblock %}
 {% block content %}
 	<div class="body">
@@ -24,7 +24,7 @@
                     {% if tim|length == 20 %}
                         <li> {{ tim }}</li>
                     {% elif tim|length > 9 and tim|length < 20 %}
-                        <button class='zakaz_button' onclick="myfunk('{{ tim }}')">Заказать билеты</button>
+                        <button class='zakaz_button' onclick="my_func('{{ tim }}')">Заказать билеты</button>
                         <br><br>
                     {% elif tim|length < 9 %}
                         Стоимость билета : {{ tim }} грн
@@ -37,18 +37,18 @@
 			<div class="three">
 				<ul class="three_ul">
 					<li class="three_li2"><img src="{% static 'img/ico1.png' %}">Расписание сеансов и цены</li>
-					<li class="three_li2"><img src="{% static 'img/ico2.png' %}"><a href="/treler/{{ film.url_name }}/"> Смотреть трейлер</a></li>
-					<li class="three_li2"><img src="{% static 'img/ico3.png' %}"><a href="/otziv/{{ film.url_name }}/"> Напишите отзыв о фильме</a></li>
+					<li class="three_li2"><img src="{% static 'img/ico2.png' %}"><a href="/trailer/{{ film.url_name }}/"> Смотреть трейлер</a></li>
+					<li class="three_li2"><img src="{% static 'img/ico3.png' %}"><a href="/review/{{ film.url_name }}/"> Напишите отзыв о фильме</a></li>
 				</ul>
 			</div>
 			<br>
 		</div>
 
 <script type="text/javascript">
-    function myfunk(seans_id){
-        my_url = '/buy/seans/'+seans_id;
-	    var buy_win = window.open(my_url,'buy_window','width=1040, height = 730, menubar="no", toolbar="no", location="no" ');
-	    buy_win.moveTo(screen.width/2-520,screen.height/2-350);
+    function my_func(session_id){
+        const my_url = '/buy/session/' + session_id;
+        const buy_win = window.open(my_url, 'buy_window', 'width=1040, height = 730, menubar="no", toolbar="no", location="no" ');
+        buy_win.moveTo(screen.width/2-520,screen.height/2-350);
 }
 
 </script>

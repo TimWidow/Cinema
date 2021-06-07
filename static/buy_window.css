@@ -1,25 +1,22 @@
 .placeButton {
   width: 30px;
-  margin : 5px;
-  margin-left:10px;
-  background-color: greenyellow;
+	margin: 5px 5px 5px 10px;
+	background-color: greenyellow;
 }
 
 .placeButton2 {
   width: 30px;
-  margin : 5px;
-  margin-left:10px;
-  background-color: yellow;
+	margin: 5px 5px 5px 10px;
+	background-color: yellow;
 }
 
 .blackButton{
 	background-color: black;
 	width: 30px;
-  	margin : 5px;
-  	margin-left:10px;
+	margin: 5px 5px 5px 10px;
 	color:white;
 }
-.korzina{
+.trash{
     	border: 2px inset black;
 	width:300px;
 	display: block;
@@ -82,7 +79,7 @@ body{
     margin:15px;
     width:150px;
     height:40px;
-    font-family: "Times New Roman";
+	font-family: "Times New Roman", serif;
     font-size: 15px;
 }
 
@@ -90,7 +87,7 @@ body{
     margin:15px;
     width:150px;
     height:40px;
-    font-family: "Times New Roman";
+	font-family: "Times New Roman", serif;
     font-size: 15px;
 }
 
@@ -98,7 +95,7 @@ body{
     margin:15px;
     width:150px;
     height:40px;
-    font-family: "Times New Roman";
+	font-family: "Times New Roman", serif;
     font-size: 15px;
 }
 
@@ -106,7 +103,7 @@ body{
     margin:15px;
     width:150px;
     height:40px;
-    font-family: "Times New Roman";
+	font-family: "Times New Roman", serif;
     font-size: 15px;
 }
 
@@ -114,7 +111,7 @@ body{
     margin:15px;
     width:150px;
     height:40px;
-    font-family: "Times New Roman";
+	font-family: "Times New Roman", serif;
     font-size: 15px;
 }
 
@@ -126,9 +123,9 @@ body{
 	display: block;
     position: absolute;
 	top: 150px;
-	left: 0px;
-	right: 0px;
-	bottom: 0px;
+	left: 0;
+	right: 0;
+	bottom: 0;
 
 	margin:144px auto;
 	width:288px;
@@ -138,7 +135,7 @@ body{
 	width: 58px;
 	height: 58px;
 	margin: auto;
-	text-align: left;
+	text-align: center;
 	transform-origin:center;
 		-o-transform-origin:center;
 		-ms-transform-origin:center;

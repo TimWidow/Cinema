@@ -1,13 +1,13 @@
 .back {
-	position:fixed;
  	top:0; 
  	bottom:0; 
  	left:0; 
  	right:0; 
 	background-image: url(img/b12.jpg);
-	background-size: 100%;
-	min-height: 3000px;
-	min-width: 1300px;
+	background-size: cover;
+	min-height: 100%;
+	min-width: 100%;
+	background-repeat: no-repeat;
 }  
 
 .cont_one {
@@ -22,7 +22,7 @@
 	font-size: 65px;
 	color: #F4B821;
 	text-align: center;
-	font-family: "BOOK ANTIQUA";
+	font-family: "BOOK ANTIQUA", serif;
 	margin-top: 37px;
 }
 
@@ -30,7 +30,7 @@
 	font-size: 15px;
 	color: #EFF4F4;
 	text-align: center;
-	font-family: "BOOK ANTIQUA";
+	font-family: "BOOK ANTIQUA", serif;
 	margin-top: 15px;
 	font-weight: bold;
 }
@@ -39,7 +39,7 @@
 	font-size: 20px;
 	color: #F4B821;
 	text-align: center;
-	font-family: "BOOK ANTIQUA";
+	font-family: "BOOK ANTIQUA", serif;
 	margin-top: 27px;
 	font-weight: bold;
 }
@@ -84,18 +84,15 @@
 
 .body {
 	width: 1000px;
-
-	background: #fff;
-	margin: 0 auto;
-	margin-top: -20px;
+	opacity: .9;
+	margin: -20px auto 0;
 }
 
 .footer {
 	width: 1000px;
 	height: 100px;
 	background: #262626;
-	margin: 0 auto;
-	margin-top: 20px;
+	margin: 20px auto 0;
 }
 
 .foot {
@@ -119,7 +116,6 @@
 
 .navbar-inner {
 	width: 960px;
-	margin: 0 auto;
 	border-radius: 0;
 	border: none;
 	background: rgb(0, 0, 52);
@@ -129,7 +125,7 @@
 	background: -ms-linear-gradient(90deg, rgb(0, 0, 52) 90%, rgb(70, 77, 255) 90%);
 	background: linear-gradient(180deg, rgb(0, 0, 52) 90%, rgb(70, 77, 255) 90%);
 	opacity: 1;
-	margin-top: -54px;
+	margin: -54px auto 0;
 }
 
 
