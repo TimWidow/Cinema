@@ -72,9 +72,7 @@
                         <button type="submit">Распечатать билет</button>
                     </td>
                     <td colspan="1" class="pad_td">
-                        <label>
-                            <input name="id_ticket" type="text" placeholder="Введите код билета..." required/>
-                        </label>
+                        <input name="id_ticket" type="text" placeholder="Введите код билета..." required/>
                     </td>
                     <td colspan="1" class="pad_td">
                         {% if admin == 'ticket_true' %}
@@ -86,7 +84,7 @@
                 </form>
             </tr>
         <tr><td colspan='3'><hr></td></tr>
-        <tr><td colspan='3'><div class="text_ticket">Работа с отчётами по сеансам кинотеатра</div></td></tr>
+        <tr><td colspan='3'><div сlass="text_ticket">Работа с отчётами по сеансам кинотеатра</div></td></tr>
         <tr><td colspan='3'><br></td></tr>
             <tr>
                 <form action="/print-report/session/" method="post">
@@ -96,9 +94,7 @@
                     </td>
 
                     <td class="pad_td">
-                        <label>
-                            <input name="id_session" type="text" placeholder="Введите код сеанса..." required/>
-                        </label>
+                        <input name="id_session" type="text" placeholder="Введите код сеанса..." required/>
                     </td>
                     <td colspan="1" class="pad_td">
                         {% if admin == 'session_true' %}
@@ -116,9 +112,7 @@
                         <button href="/print-report/date/">Распечатать отчет по нужной дате</button>
                     </td>
                     <td class="pad_td">
-                        <label>
-                            <input name="date_session" type="date" required/>
-                        </label>
+                        <input name="date_session" type="date" required/>
                     </td>
                     <td colspan="1" class="pad_td">
                         {% if date_error %}
@@ -134,14 +128,10 @@
                         <button href="/print-report/interval/">Распечатать отчет за интервал времени</button>
                     </td>
                     <td class="pad_td">
-                        <label>
-                            <input name="date1_session" type="date" required/>
-                        </label>
+                        <input name="date1_session" type="date" required/>
                     </td>
                     <td class="pad_td">
-                        <label>
-                            <input name="date2_session" type="date" required/>
-                        </label>
+                        <input name="date2_session" type="date" required/>
                     </td>
                 </form>
             </tr>

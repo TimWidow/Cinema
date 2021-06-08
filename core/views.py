@@ -141,7 +141,7 @@ def main(request, url_date=datetime.today().date(), page_number=1):
 
     args.update(args2)
     args['user'] = request.user
-    args['date_url'] = str(url_date)
+    args['date_url'] = datetime.strptime(str(url_date), '%Y-%m-%d').date()
     args['for_date'] = datetime.strptime(str(url_date), '%Y-%m-%d').date()
     if isinstance(url_date, str):
         args['weekday'] = datetime.isoweekday(datetime.strptime(url_date, '%Y-%m-%d').date())
@@ -374,7 +374,7 @@ def cabinet(request, page_number=1, admin='0'):
     args['user'] = user
     args['admin'] = admin
 
-    if not request.user.is_authenticated():
+    if not request.user.is_authenticated:
         return redirect('/')
     else:
         if not request.user.is_superuser:
@@ -515,7 +515,7 @@ def create_report(selss, variety):
     pdfmetrics.registerFont(TTFont('test', 'static/fonts/BuxtonSketch.ttf'))
     c.setFont("test", 20)
 
-    if variety == 'session':
+    if variety == 'seans':
         c.drawString(130, 800, 'Отчет по продаже билетов кинотеатра за сеанс')
     elif variety == 'date':
         c.drawString(130, 800, 'Отчет по продаже билетов кинотеатра по дате')

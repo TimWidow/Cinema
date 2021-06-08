@@ -186,6 +186,7 @@
 }
 
 .ul1 {
+	display: inline;
 	width: 950px;
 	list-style: none;
 	background: #9D9D9D;

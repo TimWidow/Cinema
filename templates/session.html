@@ -8,7 +8,7 @@
 {% block content %}
 	<div class="body">
 		<div class="one">
-			<img src="{{ film.image.url }}" width="260" height="525" alt="">
+			<img src="{{ film.image.url }}" width="260" height="525">
 		</div>
 		<div class="two">
 			<p class="two_p_five">Рассписание сеансов и цены</p>
@@ -24,7 +24,7 @@
                     {% if tim|length == 20 %}
                         <li> {{ tim }}</li>
                     {% elif tim|length > 9 and tim|length < 20 %}
-                        <button class='order_button' onclick="my_func('{{ tim }}')">Заказать билеты</button>
+                        <button class='zakaz_button' onclick="my_func('{{ tim }}')">Заказать билеты</button>
                         <br><br>
                     {% elif tim|length < 9 %}
                         Стоимость билета : {{ tim }} грн
