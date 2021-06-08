@@ -141,7 +141,7 @@ def main(request, url_date=datetime.today().date(), page_number=1):
 
     args.update(args2)
     args['user'] = request.user
-    args['date_url'] = datetime.strptime(str(url_date), '%Y-%m-%d').date()
+    args['date_url'] = str(url_date)
     args['for_date'] = datetime.strptime(str(url_date), '%Y-%m-%d').date()
     if isinstance(url_date, str):
         args['weekday'] = datetime.isoweekday(datetime.strptime(url_date, '%Y-%m-%d').date())
@@ -509,13 +509,13 @@ def print_report(request, variety):
     return cabinet(request)
 
 
-def create_report(selss, variety):
+def create_report(sells, variety):
     c = canvas.Canvas(settings.MEDIA_ROOT + "report.pdf")
     pdfmetrics.registerFont(TTFont('font', 'Arial.TTF'))
     pdfmetrics.registerFont(TTFont('test', 'static/fonts/BuxtonSketch.ttf'))
     c.setFont("test", 20)
 
-    if variety == 'seans':
+    if variety == 'session':
         c.drawString(130, 800, 'Отчет по продаже билетов кинотеатра за сеанс')
     elif variety == 'date':
         c.drawString(130, 800, 'Отчет по продаже билетов кинотеатра по дате')
@@ -533,7 +533,7 @@ def create_report(selss, variety):
     y = 740
     k = 1
     index = 1
-    for i in selss:
+    for i in sells:
         if k == 6:
             c.showPage()
             c.setFont("test", 20)

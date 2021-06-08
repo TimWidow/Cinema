@@ -68,43 +68,39 @@
 
             {% endif %}
 		</div>
-
-        <h4>
-            Киноафиша на {{ for_date }}
-		</h4>
-            {% for session in seanss %}
-                <br>
+        {% for session in sessions %}
+            {% if session.film.image.url %}
+                 <br>
 			<div class="one">
-				<img src="{{ session.film.image.url }}" width="260" height="525">
-
+				<img class="film_img" src="{{ session.film.image.url }}" alt="">
 			</div>
 			<div class="two">
-				<h3>{{ session.film.name }}</h3>
+                <div class="title_text"> {{ session.film.name }}</div>
 				<p class="two_p_one">{{ session.film.secondname }}</p>
 				<p class="two_p_two">Cеансы:<span class="time"> <a href="/film/{{ session.film.url_name }}/">расписание</a></span></p>
 				<p class="two_p_three">
 					{{ session.film.description }}
-				</p>
 				<ul class="two_ul_two">
 					<li class="two_li"><b>В прокате:</b> с {{ session.film.in_theatre|date:"d M" }}</li>
 					<li class="two_li"><b>Формат:</b> {{ session.film.format }}</li>
 					<li class="two_li"><b>Длительность:</b> {{ session.film.duration }}</li>
 					<li class="two_li"><b>Жанр:</b> {% for genre in session.film.genre.all %} {{ genre }}, {% endfor %}</li>
-					<li class="two_li"><b>Производство:</b> {{ session.film.year }}, {{ session.film.production}}</li>
-					<li class="two_li"><b>Режисер:</b> {{ session.film.director }}</li>
-					<li class="two_li"><b>Актеры:</b> {{ session.film.actors }}</li>
+					<li class="two_li"><b>Производство:</b> {{ session.film.year }}, {{ session.film.production }}</li>
+					<li class="two_li"><b>Режисёр:</b> {{ session.film.director }}</li>
+					<li class="two_li"><b>Актёры:</b> {{ session.film.actors }}</li>
 				</ul>
 			</div>
 			<div class="three">
 				<ul class="three_ul">
 					<li class="three_li"><img src="{% static 'img/ico1.png' %}"><a href="/film/{{ session.film.url_name }}/"> Расписание сеансов и цены</a></li>
-					<li class="three_li"><img src="{% static 'img/ico2.png' %}"><a href="/treler/{{ session.film.url_name }}/"> Смотреть трейлер</a></li>
-					<li class="three_li"><img src="{% static 'img/ico3.png' %}"><a href="/otziv/{{ session.film.url_name }}/"> Напишите отзыв о фильме</a></li>
+					<li class="three_li"><img src="{% static 'img/ico2.png' %}"><a href="/trailer/{{ session.film.url_name }}/"> Смотреть трейлер</a></li>
+					<li class="three_li"><img src="{% static 'img/ico3.png' %}"><a href="/review/{{ session.film.url_name }}/"> Напишите отзыв о фильме</a></li>
 				</ul>
 			</div>
 			<br>
+            {% endif %}
         {% endfor %}
-        {% if net_seansov %}
+        {% if no_sessions %}
             <br>
             <img class="closed_img" src="{% static 'img/closed.png' %}">
             <div class="closed_text">
@@ -112,21 +108,6 @@
                 <br>
                 Приходите позже, возможно добавятся новые интересные сеансы.
             </div>
-
-        {% else %}
-			<div class="pagination">
-		        <div class="pagination pagination-centered">
-			<ul>
-                {% for page in ssessions.paginator.page_range %}
-                    {% if page == sessions.number %}
-                        <li class="current"><a href="/{{ date_url }}/page/{{ page }}/">{{ page }}</a></li>
-                    {% else %}
-                        <li><a href="/{{ date_url }}/page/{{ page }}/">{{ page }}</a></li>
-                    {% endif %}
-                {% endfor %}
-			</ul>
-		</div>
-	</div>
     {% endif %}
 	</div>
 

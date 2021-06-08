@@ -13,4 +13,4 @@ class GuestReview(models.Model):
 
 class AdminReview(models.Model):
     text = models.TextField(max_length=20000)
-    guestReview = models.ForeignKey(GuestReview, on_delete=models.CASCADE)
+    guestReview = models.ForeignKey(GuestReview, on_delete=models.DO_NOTHING)

@@ -19,7 +19,7 @@
                         <a href="/review/{{ ticket.session_id.film.url_name }}/">{{ ticket.seans_id.film.name }}</a>
                         , ряд: {{ ticket.row }}, место: {{ ticket.seat }}, цена: {{ ticket.price }} грн
                         {% if not ticket.forname %}
-                            <br>код для печати: {{ bilet.pk }}
+                            <br>код для печати: {{ ticket.pk }}
                         {% else %}
                             <br>Бронь снимается за 30 минут до начала сеанса!
                         {% endif %}
@@ -49,7 +49,7 @@
 <div class="pagination">
     <div class="pagination pagination-centered">
         <ul>
-            {% for page in bilets.paginator.page_range %}
+            {% for page in tickets.paginator.page_range %}
                 {% if page == ticket.number %}
                     <li class="current"><a href="/cabinet/page/{{ page }}/">{{ page }}</a></li>
                 {% else %}
@@ -61,7 +61,7 @@
 </div>
         {% else %}
         <table class="cabinet_table" align="center">
-        <caption class="cabinet_caption">Работа с отчетами кинотеатра</caption>
+        <caption class="cabinet_caption">Работа с отчётами кинотеатра</caption>
             <tr><td colspan='3'><hr></td></tr>
             <tr><td colspan='3'><div сlass="text_ticket">Работа с билетами кинотеатра</div></td></tr>
             <tr><td colspan='3'><br></td></tr>
@@ -90,7 +90,7 @@
                 <form action="/print-report/session/" method="post">
                     {% csrf_token %}
                     <td class="pad_td">
-                        <button href="/print-report/session/">Распечатать отчет по сеансу</button>
+                        <button href="/print-report/session/">Распечатать отчёт по сеансу</button>
                     </td>
 
                     <td class="pad_td">
@@ -98,9 +98,9 @@
                     </td>
                     <td colspan="1" class="pad_td">
                         {% if admin == 'session_true' %}
-                            {{ seans_name }}, {{ seans_date }}, {{ seans_time }}
+                            {{ session_name }}, {{ session_date }}, {{ session_time }}
                         {% elif admin == 'session_false' %}
-                            {{ seans_false }}
+                            {{ session_false }}
                         {% endif %}
                     </td>
                 </form>
@@ -109,7 +109,7 @@
                 <form action="/print-report/date/" method="post">
                     {% csrf_token %}
                     <td class="pad_td">
-                        <button href="/print-report/date/">Распечатать отчет по нужной дате</button>
+                        <button href="/print-report/date/">Распечатать отчёт по нужной дате</button>
                     </td>
                     <td class="pad_td">
                         <input name="date_session" type="date" required/>
@@ -125,7 +125,7 @@
                 <form action="/print-report/interval/" method="post">
                     {% csrf_token %}
                     <td class="pad_td">
-                        <button href="/print-report/interval/">Распечатать отчет за интервал времени</button>
+                        <button href="/print-report/interval/">Распечатать отчёт за интервал времени</button>
                     </td>
                     <td class="pad_td">
                         <input name="date1_session" type="date" required/>
@@ -137,13 +137,13 @@
             </tr>
             <tr>
                 <td class="pad_td">
-                    <a href="/print-report/week/"><button>Распечатать отчет по сеансам на неделю</button></a>
+                    <a href="/print-report/week/"><button>Распечатать отчёт по сеансам на неделю</button></a>
                 </td>
                 <td class="pad_td">
-                    <a href="/print-report/month/"><button>Распечатать отчет по сеансам на месяц</button></a>
+                    <a href="/print-report/month/"><button>Распечатать отчёт по сеансам на месяц</button></a>
                 </td>
                 <td class="pad_td">
-                    <a href="/print-report/halfyear/"><button>Распечатать отчет по сеансам за полгода</button></a>
+                    <a href="/print-report/halfyear/"><button>Распечатать отчёт по сеансам за полгода</button></a>
                 </td>
             </tr>
         <tr><td colspan='3'><br></td></tr>

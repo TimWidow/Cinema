@@ -7,7 +7,7 @@ class Review(models.Model):
     text = models.TextField(max_length=20000)
     email = models.EmailField()
     date = models.DateField()
-    film = models.ForeignKey(Film, on_delete=models.CASCADE)
+    film = models.ForeignKey(Film, on_delete=models.DO_NOTHING)
 
     def __str__(self):
         return self.film.name

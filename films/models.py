@@ -81,7 +81,7 @@ class Session(models.Model):
                 getattr(self, 'date'),
                 datetime.datetime.strptime(
                     getattr(self, 'time'),
-                    '%Y-%m-%d').time()
+                    '%H:%M').time()
             )
             time2 = datetime.datetime.now()
 

@@ -31,7 +31,7 @@
 
 .h3 {
 	font-size: 15px;
-	color: #EFF4F4;
+	color: white;
 	text-align: center;
 	font-family: "BOOK ANTIQUA", serif;
 	margin-top: 15px;
@@ -237,13 +237,14 @@ h4 {
 
 
  h3 {
+	color: white;
 	font-size: 20px;
-	color: #2E94FC;
 	font-weight: 100;
 	padding-left: 14px;
 }
 
 .two_p_one {
+	color: white;
 	padding-left: 14px;
 	margin-top: -16px;
 	font-size: 17px;
@@ -251,12 +252,14 @@ h4 {
 
 
 .two_p_two {
+	color: white;
 	padding-left: 14px;
 	margin-top: 20px;
 	font-size: 17px;
 }
 
 .two_p_three {
+	color: white;
 	padding-left: 14px;
 	margin-top: 20px;
 	font-size: 15px;
@@ -279,21 +282,25 @@ h4 {
 }
 
 .two_li {
+	color: white;
 	list-style: none;
 	margin-left: -10px;
 }
 
 .three_li {
+	color: white;
 	display: inline; 
 	margin-left: 100px;
 }
 .three_ul {
+	color: white;
 	margin-top: 50px;
 	text-align: center;
 	margin-left: -120px;
 }
 
 .three {
+	color: white;
 	border-bottom: 1px dotted #ccc;
 	margin: 0 24px;
 }
@@ -318,15 +325,26 @@ h4 {
   border: 1px solid #B5B5B5;
   color: #454545;
 }
-
+.film_img{
+	float: left;
+    display: block;
+    margin: 0 auto;
+}
 .closed_img{
     display: block;
     margin: 0 auto;
 }
 
 .closed_text{
+	color: white;
     text-align: center;
     font-size: 19px;
     padding: 40px;
+    font-family: "Helvetica", sans-serif;
+}
+.title_text{
+	color: white;
+    text-align: left;
+    font-size: 24px;
     font-family: "Helvetica", sans-serif;
 }
